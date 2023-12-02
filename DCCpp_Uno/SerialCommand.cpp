@@ -342,6 +342,17 @@ void SerialCommand::parse(char *com){
 
 /***** READ STATUS OF DCC++ BASE STATION  ****/    
 
+    case '#': 
+/*
+ *
+ */
+    INTERFACE.print("<#");
+    INTERFACE.print(MAX_MAIN_REGISTERS);
+    INTERFACE.print(">");
+    break;
+
+/***** READ STATUS OF DCC++ BASE STATION  ****/    
+
     case 's':      // <s>
 /*
  *    returns status messages containing track power status, throttle status, turn-out status, and a version number
